@@ -1,6 +1,7 @@
 import React, { useReducer } from "react";
 import { Context } from "./appContext";
 import reducer, { initialState } from "./store";
+import { TestCard } from "./components";
 import "./App.css";
 
 function App() {
@@ -8,7 +9,9 @@ function App() {
 
   return (
     <Context.Provider value={{ state, dispatch }}>
-      <div className="app">fd</div>
+      <div className="app">
+        <TestCard />
+      </div>
     </Context.Provider>
   );
 }

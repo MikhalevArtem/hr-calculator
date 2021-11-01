@@ -1,5 +1,15 @@
-import { CHANGE_COUNT, CHANGE_CATEGORY, NEXT_QUESTION } from "./constants";
-import { changeCategory, changeCount, nextQuestion } from "./actionCreators";
+import {
+  CHANGE_COUNT,
+  CHANGE_CATEGORY,
+  NEXT_QUESTION,
+  CHANGE_COMPLETED_STATUS,
+} from "./constants";
+import {
+  changeCategory,
+  changeCount,
+  nextQuestion,
+  changeCompletedStatus,
+} from "./actionCreators";
 
 function addition(currentCount, value) {
   const result = currentCount + value;
@@ -27,9 +37,11 @@ const initialState = {
   currentCategory: 0,
   currentQuestion: 0,
   count: 0,
+  completed: false,
   changeCategory,
   changeCount,
   nextQuestion,
+  changeCompletedStatus,
 };
 
 function reducer(state, action) {
@@ -57,6 +69,11 @@ function reducer(state, action) {
       return {
         ...state,
         currentQuestion: state.currentQuestion + 1,
+      };
+    case CHANGE_COMPLETED_STATUS:
+      return {
+        ...state,
+        completed: !state.completed,
       };
     default:
       return state;

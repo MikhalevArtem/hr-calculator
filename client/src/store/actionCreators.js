@@ -1,4 +1,9 @@
-import { CHANGE_CATEGORY, CHANGE_COUNT, NEXT_QUESTION } from "./constants";
+import {
+  CHANGE_CATEGORY,
+  CHANGE_COUNT,
+  NEXT_QUESTION,
+  CHANGE_COMPLETED_STATUS,
+} from "./constants";
 
 function changeCategory(newCategory) {
   return {
@@ -20,4 +25,10 @@ function nextQuestion() {
   };
 }
 
-export { changeCategory, changeCount, nextQuestion };
+function changeCompletedStatus() {
+  return {
+    type: CHANGE_COMPLETED_STATUS,
+  };
+}
+
+export { changeCategory, changeCount, nextQuestion, changeCompletedStatus };
