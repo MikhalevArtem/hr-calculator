@@ -1,9 +1,4 @@
-import {
-  CHANGE_CATEGORY,
-  CHANGE_COUNT,
-  NEXT_QUESTION,
-  CHANGE_COMPLETED_STATUS,
-} from "./constants";
+import { CHANGE_CATEGORY, CHANGE_COUNT, NEXT_QUESTION } from "./constants";
 
 function changeCategory(newCategory) {
   return {
@@ -19,16 +14,11 @@ function changeCount(modifier, value) {
   };
 }
 
-function nextQuestion() {
+function nextQuestion(step) {
   return {
     type: NEXT_QUESTION,
+    payload: step,
   };
 }
 
-function changeCompletedStatus() {
-  return {
-    type: CHANGE_COMPLETED_STATUS,
-  };
-}
-
-export { changeCategory, changeCount, nextQuestion, changeCompletedStatus };
+export { changeCategory, changeCount, nextQuestion };
