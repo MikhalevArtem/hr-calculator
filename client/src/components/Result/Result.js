@@ -12,7 +12,7 @@ function Result() {
     return (
       <div className="result">
         <p>К сожалению, нам с тобой не по пути.</p>
-        <Button>Ещё разок</Button>
+        <Button onClick={() => dispatch(resetTest())}>Ещё разок</Button>
       </div>
     );
   }
@@ -20,7 +20,7 @@ function Result() {
     return (
       <div className="result">
         <p>Ну если больше никто не придёт, то возьмём тебя.</p>
-        <Button>Ещё разок</Button>
+        <Button onClick={() => dispatch(resetTest())}>Ещё разок</Button>
       </div>
     );
   if (count >= 81 && count <= 100)
