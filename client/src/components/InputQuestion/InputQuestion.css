@@ -25,3 +25,7 @@ input[type="number"] {
 input[type="number"]:focus {
   outline: 2px solid rgba(241, 193, 104, 0.925);
 }
+.stylized-button span {
+  font-size: x-large;
+  vertical-align: middle;
+}

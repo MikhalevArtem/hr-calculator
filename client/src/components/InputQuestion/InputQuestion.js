@@ -63,7 +63,9 @@ function InputQuestion() {
     <div className="input-question">
       <QuestionText text={question.text} />
       <div className="input-block">
-        <Button onClick={handleInputSubtraction}>-</Button>
+        <Button onClick={handleInputSubtraction}>
+          <span>-</span>
+        </Button>
         <input
           type="number"
           min={question.minValue}
@@ -72,7 +74,9 @@ function InputQuestion() {
           value={inputValue}
           onChange={handleInputChange}
         />
-        <Button onClick={handleInputAddition}>+</Button>
+        <Button onClick={handleInputAddition}>
+          <span>+</span>
+        </Button>
       </div>
       <div className="button-block">
         <Button onClick={handleAnswer}>Ответить</Button>

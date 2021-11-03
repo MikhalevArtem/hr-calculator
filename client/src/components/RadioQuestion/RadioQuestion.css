@@ -5,6 +5,7 @@
   flex-grow: 1;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 .btn {
   width: 100%;

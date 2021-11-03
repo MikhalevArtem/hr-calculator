@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Button } from "..";
 import { Context } from "../../appContext";
+import "./Result.css";
 
 function Result() {
   const {
