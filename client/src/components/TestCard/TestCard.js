@@ -4,6 +4,7 @@ import {
   CategorySelection,
   RadioQuestion,
   InputQuestion,
+  Result,
 } from "..";
 import { Context } from "../../appContext";
 import { useQuery } from "@apollo/client";
@@ -19,13 +20,17 @@ function TestCard() {
       categoryID: currentCategory,
     },
   });
-  if (currentQuestion >= data.getCategoryQuestions.length) {
-    return <div className="test-card">{count}</div>;
-  }
   if (data.getCategoryQuestions.length === 0) {
     return (
       <div className="test-card">
         <Nonexistent />
+      </div>
+    );
+  }
+  if (currentQuestion >= data.getCategoryQuestions.length) {
+    return (
+      <div className="test-card">
+        <Result />
       </div>
     );
   }

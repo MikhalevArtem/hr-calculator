@@ -6,3 +6,4 @@ export * from "./CategorySelection";
 export * from "./RadioQuestion";
 export * from "./InputQuestion";
 export * from "./QuestionText";
+export * from "./Result";

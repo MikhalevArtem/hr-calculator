@@ -1,5 +1,15 @@
-import { CHANGE_COUNT, CHANGE_CATEGORY, NEXT_QUESTION } from "./constants";
-import { changeCategory, changeCount, nextQuestion } from "./actionCreators";
+import {
+  CHANGE_COUNT,
+  CHANGE_CATEGORY,
+  NEXT_QUESTION,
+  RESET_TEST,
+} from "./constants";
+import {
+  changeCategory,
+  changeCount,
+  nextQuestion,
+  resetTest,
+} from "./actionCreators";
 
 function addition(currentCount, value) {
   const result = currentCount + value;
@@ -24,16 +34,24 @@ function multiplication(currentCount, value) {
 }
 
 const initialState = {
-  currentCategory: 1,
-  currentQuestion: 1,
+  currentCategory: 0,
+  currentQuestion: 0,
   count: 0,
   changeCategory,
   changeCount,
   nextQuestion,
+  resetTest,
 };
 
 function reducer(state, action) {
   switch (action.type) {
+    case RESET_TEST:
+      return {
+        ...state,
+        currentCategory: 0,
+        currentQuestion: 0,
+        count: 0,
+      };
     case CHANGE_CATEGORY:
       return {
         ...state,

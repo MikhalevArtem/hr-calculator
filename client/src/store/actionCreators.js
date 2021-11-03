@@ -1,4 +1,15 @@
-import { CHANGE_CATEGORY, CHANGE_COUNT, NEXT_QUESTION } from "./constants";
+import {
+  CHANGE_CATEGORY,
+  CHANGE_COUNT,
+  NEXT_QUESTION,
+  RESET_TEST,
+} from "./constants";
+
+function resetTest() {
+  return {
+    type: RESET_TEST,
+  };
+}
 
 function changeCategory(newCategory) {
   return {
@@ -21,4 +32,4 @@ function nextQuestion(step) {
   };
 }
 
-export { changeCategory, changeCount, nextQuestion };
+export { changeCategory, changeCount, nextQuestion, resetTest };
