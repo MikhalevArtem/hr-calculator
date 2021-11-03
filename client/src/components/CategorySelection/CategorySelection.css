@@ -4,10 +4,12 @@
   flex-direction: column;
   flex-grow: 1;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  align-content: center;
 }
 .btn {
+  display: flex;
+  max-width: 100%;
   width: 100%;
   flex-grow: 1;
-  margin: 10px;
 }

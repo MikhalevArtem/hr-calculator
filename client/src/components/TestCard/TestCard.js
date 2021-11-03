@@ -13,7 +13,7 @@ import "./TestCard.css";
 
 function TestCard() {
   const {
-    state: { currentCategory, currentQuestion, count },
+    state: { currentCategory, currentQuestion },
   } = useContext(Context);
   const { data } = useQuery(LOAD_CATEGORY, {
     variables: {
@@ -45,7 +45,6 @@ function TestCard() {
       {data.getCategoryQuestions[currentQuestion].questionType === "input" && (
         <InputQuestion />
       )}
-      count:{count}
     </div>
   );
 }

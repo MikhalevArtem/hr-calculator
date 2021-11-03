@@ -17,7 +17,9 @@ function App() {
   });
 
   return loading ? (
-    <Loader />
+    <div className="app">
+      <Loader />
+    </div>
   ) : (
     <Context.Provider value={{ state, dispatch }}>
       <div className="app">
