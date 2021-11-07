@@ -126,3 +126,4 @@ Photoshop (-10)
 GraphiQL по ссылке: http://localhost:5000/graphql.
 
 Слиент открывается на 3000 порту и доступен по ссылке: http://localhost:3000/.
+Развёрнутое приложение на heroku: https://calm-stream-27599.herokuapp.com/
